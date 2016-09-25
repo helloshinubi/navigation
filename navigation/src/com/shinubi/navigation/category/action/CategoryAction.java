@@ -1,5 +1,7 @@
 package com.shinubi.navigation.category.action;
 
+import org.springframework.stereotype.Component;
+
 import com.shinubi.navigation.base.action.BaseAction;
 
 /**
@@ -10,6 +12,7 @@ import com.shinubi.navigation.base.action.BaseAction;
  *@author   ShiNubi
  *@version   
  */
+@Component("categoryAction")
 public class CategoryAction extends BaseAction {
 
     /**
