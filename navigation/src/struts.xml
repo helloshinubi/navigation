@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "struts-2.1.dtd">
+<struts>
+
+	<!-- 设置Web应用的默认编码集为 -->
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<!-- 设置Struts2默认的ObjectFactory为spring -->
+	<constant name="struts.objectFactory" value="spring" />
+	<!-- 设置Struts2应用是否处于开发模式，通常在开发调试阶段设为true,正式上线后可设为false -->
+	<constant name="struts.devMode" value="false" />
+	<!-- 设置Struts2的默认主题为simple -->
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+
+	<!-- 配置struts包继承json-default 使用 returnJson返回类型方便处理json数据 -->
+	<package name="struts-base" extends="json-default" namespace="/" abstract="true">
+		<!-- 定义全局result -->
+		<global-results>
+			<!-- 定义名为exception的全局result -->
+			<result name="redirect" type="redirect">${returnPageURL}</result>
+			<result name="dispatcher" type="dispatcher">${returnPageURL}</result>
+			<result name="redirectAction" type="redirectAction">${returnPageURL}</result>
+			<result name="exception">/exception.jsp</result>
+			<result name="login">/login.jsp</result>
+			<result name="loginOut">/login.jsp</result>
+			<result name="fail">/login.jsp</result>
+			<result name="returnJson" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</global-results>
+
+		<!-- 定义全局异常映射 ，项目上线配置-->
+		<!-- 
+			<global-exception-mappings> 捕捉到Exception异常(所有异常)时跳转到exception所命名的视图上 
+			<exception-mapping exception="java.lang.Exception" result="exception"/> 
+			</global-exception-mappings> 
+		-->
+	</package>
+
+</struts>    
