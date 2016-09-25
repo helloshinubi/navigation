@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>    
+<!DOCTYPE mapper    
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shinubi.navigation">
+
+	<resultMap type="Category" id="categoryMap">
+		<id column="id" property="id"/>
+		<result column="name" property="name"/>
+		<result column="bg_image_url" property="bgImageURL"/>
+	</resultMap>
+
+	<sql id="category-field">
+		id,
+		name,
+		bg_image_url
+	</sql>
+
+	<insert id="insert-category" parameterType="Category">
+		insert into  
+			t_category(name,bg_image_url)
+		values(
+			#{name},
+			#{bgImageURL}
+		)
+	</insert>
+	
+	<delete id="delete-category-by-id" parameterType="int">
+		delete from t_category where id = #{categoryId}
+	</delete>
+	
+	<select id="select-category-by-id" parameterType="int" resultMap="categoryMap">
+		select 
+			<include refid="category-field"/>
+		from 
+			t_category 
+		where id = #{categoryId}
+	</select>
+	
+	<update id="update-category" parameterType="Category">
+		update
+			 t_category
+		 set name = #{name},bgImageURL = #{bg_image_url}
+	</update>
+
+</mapper> 
