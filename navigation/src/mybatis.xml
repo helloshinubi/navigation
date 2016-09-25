@@ -21,11 +21,11 @@
 
 	<!-- 配置项目中实体类的别名 -->
 	<typeAliases>
-		<!--<typeAlias alias="user" type="com.datasure.license.admin.pojo.User" />-->
+		<typeAlias alias="Category" type="com.shinubi.navigation.category.Category"/>
     </typeAliases>
     
     <!-- 配置项目中mybatis相关配置文件的路径 -->
 	<mappers>
-	    <!--<mapper resource="com/datasure/license/admin/pojo/User.xml" />-->
+	    <mapper resource="com/shinubi/navigation/category/Category.xml"/>
 	</mappers>
 </configuration>

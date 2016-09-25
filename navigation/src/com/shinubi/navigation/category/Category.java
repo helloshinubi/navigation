@@ -1,4 +1,4 @@
-package com.navigation.category;
+package com.shinubi.navigation.category;
 /**
  *@ClassName:Category 
  *@Function: 导航模块类型. 

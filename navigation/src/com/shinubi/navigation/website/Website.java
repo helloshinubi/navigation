@@ -1,4 +1,4 @@
-package com.navigation.website;
+package com.shinubi.navigation.website;
 /**
  *@ClassName:Website 
  *@Function: 某个网站实体. 

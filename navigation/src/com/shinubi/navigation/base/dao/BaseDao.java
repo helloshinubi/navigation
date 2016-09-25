@@ -1,4 +1,4 @@
-package com.shinubi.navigation.base.action;
+package com.shinubi.navigation.base.dao;
 
 import javax.annotation.Resource;
 

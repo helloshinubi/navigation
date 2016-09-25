@@ -1,4 +1,4 @@
-package com.navigation.category.action;
+package com.shinubi.navigation.category.action;
 
 import com.shinubi.navigation.base.action.BaseAction;
 
