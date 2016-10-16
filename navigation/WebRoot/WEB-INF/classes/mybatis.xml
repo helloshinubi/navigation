@@ -21,11 +21,13 @@
 
 	<!-- 配置项目中实体类的别名 -->
 	<typeAliases>
-		<typeAlias alias="Category" type="com.shinubi.navigation.category.Category"/>
+		<typeAlias alias="Category" type="com.shinubi.navigation.category.pojo.Category"/>
+		<typeAlias alias="Website" type="com.shinubi.navigation.website.pojo.Website"/>
     </typeAliases>
     
     <!-- 配置项目中mybatis相关配置文件的路径 -->
 	<mappers>
-	    <mapper resource="com/shinubi/navigation/category/Category.xml"/>
+	    <mapper resource="com/shinubi/navigation/category/pojo/Category.xml"/>
+	    <mapper resource="com/shinubi/navigation/website/pojo/Website.xml"/>
 	</mappers>
 </configuration>

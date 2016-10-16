@@ -3,13 +3,22 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
-	
+
 	<!-- 项目名字的描述 -->
-    <display-name>navigation</display-name>
+	<display-name>navigation</display-name>
 	<!-- 配置项目默认首页 -->
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext.xml</param-value>
+	</context-param>
+	<!-- spring监听器 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
 
 	<!-- 配置过滤器 spring接口提供的字符过滤器 -->
 	<filter>
@@ -33,8 +42,8 @@
 		<filter-name>CharacterEncodingFilter</filter-name>
 		<url-pattern>*.action</url-pattern>
 	</filter-mapping>
-	
-	<!-- 配置 Struts2 核心过滤器-->
+
+	<!-- 配置 Struts2 核心过滤器 -->
 	<filter>
 		<filter-name>struts2</filter-name>
 		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
@@ -43,12 +52,12 @@
 		<filter-name>struts2</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	
+
 	<!-- 配置项目的session 过期时间，tomcat 默认为30分钟 -->
 	<session-config>
 		<session-timeout>20</session-timeout>
 	</session-config>
-	
+
 
 
 </web-app>

@@ -3,7 +3,7 @@ package com.shinubi.navigation.category.dao;
 import org.springframework.stereotype.Component;
 
 import com.shinubi.navigation.base.dao.BaseDao;
-import com.shinubi.navigation.category.Category;
+import com.shinubi.navigation.category.pojo.Category;
 
 /**
  *@ClassName:CategoryDaoImpl 

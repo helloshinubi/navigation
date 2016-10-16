@@ -1,6 +1,7 @@
 package com.shinubi.navigation.category.dao;
 
-import com.shinubi.navigation.category.Category;
+import com.shinubi.navigation.category.pojo.Category;
+
 
 /**
  *@ClassName:CategoryDao 
